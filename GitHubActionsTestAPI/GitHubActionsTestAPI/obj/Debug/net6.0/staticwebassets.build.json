@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "DOxSKe/o9uyTFoB+L9NfxxcLbCxhFSkZxSZoQ3v1QBY=",
+  "Source": "GitHubActionsTestAPI",
+  "BasePath": "_content/GitHubActionsTestAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
