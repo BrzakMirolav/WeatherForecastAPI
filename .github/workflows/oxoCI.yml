@@ -47,5 +47,5 @@ jobs:
         run: |
          cd GitHubActionsTestAPI
          iisreset /stop
-         Copy-Item ../Publish/* C:/DeployAPI -Recurse -Force
+         Copy-Item D:\a\WeatherForecastAPI\WeatherForecastAPI\Publish\* C:\DeployAPI -Recurse -Force
          iisreset /start
