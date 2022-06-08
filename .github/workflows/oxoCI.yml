@@ -43,9 +43,15 @@ jobs:
          dotnet build --configuration Release --no-restore
          dotnet publish -c Release -o ../Publish -r win-x64 --self-contained true /p:UseAppHost=true
          
-      - name: Deploy to IIS
-        run: |
-         cd GitHubActionsTestAPI
-         iisreset /stop
-         Copy-Item D:\a\WeatherForecastAPI\WeatherForecastAPI\Publish\* C:\DeployAPI -Recurse -Force
-         iisreset /start
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+         name: Application_Artifact
+         path: D:\a\WeatherForecastAPI\WeatherForecastAPI\Publish\
+         
+     # - name: Deploy to IIS
+      #  run: |
+       #  cd GitHubActionsTestAPI
+       #  iisreset /stop
+        # Copy-Item D:\a\WeatherForecastAPI\WeatherForecastAPI\Publish\* C:\DeployAPI -Recurse -Force
+        # iisreset /start
